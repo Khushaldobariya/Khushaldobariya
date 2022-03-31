@@ -1,5 +1,6 @@
 
 import React from "react"; 
+import Smd from "./compontent/Smd";
 
 function App(props) {
    let  Medicine_Data =
@@ -11,8 +12,8 @@ function App(props) {
        price: 150,
        expiry: 2022,
        status: true
-     },
-     {
+      },
+      {
        id: 102,
        name: 'Eltrombopag',
        quantity: 90,
@@ -49,7 +50,10 @@ function App(props) {
    let total = filterdata.reduce(( acc,d,i)=> acc+d.price ,0);
    
     return (
-      <table border = "1"> 
+      
+      <>
+      <Smd />
+      <table border = "1" > 
         <h1 style={{color:"blue"}}> Medicine Data</h1>
         <tr>
           <th>name</th>
@@ -64,7 +68,7 @@ function App(props) {
             return(
               <>
                <tr>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.name}</td>
+                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}></td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.quantity}</td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.price}</td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.expiry}</td>
@@ -77,6 +81,7 @@ function App(props) {
           })
         }
       </table>
+      </>
     )
 
 }
