@@ -1,6 +1,8 @@
 
 import React from "react"; 
 import Smd from "./compontent/Smd";
+import Country from "./container/Country";
+import State from "./container/State";
 
 function App(props) {
    let  Medicine_Data =
@@ -53,7 +55,9 @@ function App(props) {
       
       <>
       <Smd />
-      <table border = "1" > 
+      <State />
+      <Country />
+      {/* <table border = "1" > 
         <h1 style={{color:"blue"}}> Medicine Data</h1>
         <tr>
           <th>name</th>
@@ -80,7 +84,7 @@ function App(props) {
             )
           })
         }
-      </table>
+      </table> */}
       </>
     )
 
