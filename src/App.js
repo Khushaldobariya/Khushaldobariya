@@ -55,9 +55,9 @@ function App(props) {
     return (
       
       <>
-      <Smd />
-      <State />
       <Country />
+      <State />
+      <Smd />
       <StateFun />
       { <table border = "1" style={{margin:"50px"}}> 
         <h1 style={{color:"blue"}}> Medicine Data</h1>
