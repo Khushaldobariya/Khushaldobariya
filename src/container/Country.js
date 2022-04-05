@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 export default class Country extends Component {
     constructor(props) {
         super(props);
-        this.country = {
+        this.state = {
             id : 102,
             countryName : 'india'
         }
     }
     changeCountryname = () => {
-        this.setCountry({
+        this.setState({
             countryName : 'us'
         })
     }
     render() {
         return (
             <div>
-                {this.country.countryName}
+                {this.state.countryName}
                 <button onClick={()=> this.changeCountryname()}> change country</button>
             </div>
         );

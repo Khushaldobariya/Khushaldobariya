@@ -3,6 +3,7 @@ import React from "react";
 import Smd from "./compontent/Smd";
 import Country from "./container/Country";
 import State from "./container/State";
+import StateFun from "./container/Statefun";
 
 function App(props) {
    let  Medicine_Data =
@@ -57,7 +58,8 @@ function App(props) {
       <Smd />
       <State />
       <Country />
-      {/* <table border = "1" > 
+      <StateFun />
+      { <table border = "1" style={{margin:"50px"}}> 
         <h1 style={{color:"blue"}}> Medicine Data</h1>
         <tr>
           <th>name</th>
@@ -72,7 +74,7 @@ function App(props) {
             return(
               <>
                <tr>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}></td>
+                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.name}</td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.quantity}</td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.price}</td>
                  <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.expiry}</td>
@@ -84,7 +86,8 @@ function App(props) {
             )
           })
         }
-      </table> */}
+      </table> 
+    }
       </>
     )
 
