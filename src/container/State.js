@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import City from './City';
 
 export default class State extends Component {
     constructor(props) {
@@ -7,12 +8,18 @@ export default class State extends Component {
             id: 101,
             stateName : 'Gujart'
          }
+         {
+             if (stateName = 'gujart') {
+                 
+             }
+         }
         }
         changeStatename = () => {
             this.setState({
                 stateName : 'Rajsthan'
             })
         }
+
     render() {
         return (
             <div> {this.state.stateName}

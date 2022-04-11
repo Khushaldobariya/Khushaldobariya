@@ -1,9 +1,12 @@
 
 import React from "react"; 
 import Smd from "./compontent/Smd";
+import City from "./container/City";
 import Country from "./container/Country";
 import State from "./container/State";
 import StateFun from "./container/Statefun";
+import Counter from "./container/Counter";
+import Clock from "./container/Clock";
 
 function App(props) {
    let  Medicine_Data =
@@ -55,39 +58,15 @@ function App(props) {
     return (
       
       <>
-      <Country />
-      <State />
-      <Smd />
-      <StateFun />
-      { <table border = "1" style={{margin:"50px"}}> 
-        <h1 style={{color:"blue"}}> Medicine Data</h1>
-        <tr>
-          <th>name</th>
-          <th>quantity</th>
-          <th>price</th>
-          <th>expiry</th>
-          <th>status</th>
-          <th>total price</th>
-        </tr>
-        {
-          filterdata.map((d,i)=>{
-            return(
-              <>
-               <tr>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.name}</td>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.quantity}</td>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.price}</td>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.expiry}</td>
-                 <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}}>{d.status.toString()}</td>
-                 {  i === 0 ? <td style={{color: "darkblue ",fontweight:"100",padding:"10px"}} rowSpan={filterdata.length}>{total}</td> : null }
+       {/* <State />
+       <Smd />
+       <StateFun />
+       <Counter /> */}
+       <Clock />
       
-                 </tr>
-           </>
-            )
-          })
-        }
-      </table> 
-    }
+
+  
+    
       </>
     )
 
