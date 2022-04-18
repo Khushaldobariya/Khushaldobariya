@@ -1,5 +1,5 @@
 
-import React from "react"; 
+import React, { useEffect, useState } from "react"; 
 import Smd from "./compontent/Smd";
 import City from "./container/City";
 import Country from "./container/Country";
@@ -7,10 +7,15 @@ import State from "./container/State";
 import StateFun from "./container/Statefun";
 import Counter from "./container/Counter";
 import Clock from "./container/Clock";
+import Clockfun from "./container/Clockfun";
 
 function App(props) {
-   let  Medicine_Data =
-  [
+ const HomeWithLoading =Loading(Home);
+const [Loading , setLoading] = useState (false)
+const [data , setData] = useState([])
+
+  const  userdata =
+    [
      {
        id: 101,
        name: 'Abacavir',
@@ -43,33 +48,28 @@ function App(props) {
        expiry: 2023,
        status: true
      },
-     {
-       id: 105,
-       name: 'Phenytoin',
-       quantity: 63,
-       price: 250,
-       expiry: 2021,
-       status: false
-     }
    ];
-   let filterdata = Medicine_Data.filter((d,i)=>( d.price > 200 && d.expiry > 2021))
-   let total = filterdata.reduce(( acc,d,i)=> acc+d.price ,0);
-   
+   useEffect (
+     () => {
+       setLoading(ture)
+      setTimeout(() => {setLoading(false); setData()},2000)
+
+     }
+   )
+
     return (
       
       <>
-       {/* <State />
-       <Smd />
-       <StateFun />
-       <Counter /> */}
-       <Clock />
-      
-
-  
-    
+       <div>
+<HomeWithLoading 
+isLoading ={Loading}
+data ={data}
+/>
+       </div>
       </>
     )
 
+  
 }
 
 
